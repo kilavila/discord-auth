@@ -42,3 +42,11 @@ const {
     DB_PASS
 } = process.env;
 ```
+
+Add routes, f.ex:
+
+```js
+const postRouter = require('./routes/post');
+
+app.use('/posts', postRouter);
+```
