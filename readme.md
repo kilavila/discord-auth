@@ -50,3 +50,24 @@ const postsRouter = require('./routes/posts');
 
 app.use('/posts', postsRouter);
 ```
+
+Create new router
+
+```js
+const express = require('express');
+const router = express.Router();
+
+const {
+    API_KEY
+} = process.env;
+
+router.post('/:apiKey', (req, res) => {
+
+    // Check API-Key
+    
+    // Handle request and deliver response
+
+});
+
+module.exports = router;
+```
