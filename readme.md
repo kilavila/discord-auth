@@ -72,3 +72,35 @@ router.post('/:apiKey', (req, res) => {
 
 module.exports = router;
 ```
+
+Create new mongoose schema, f.ex:
+
+```js
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const postSchema = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    body: {
+        type: String,
+        required: true
+    },
+    author: {
+        type: String,
+        required: true
+    }
+}, { timestamps: true });
+
+const Post = mongoose.model('Post', postSchema);
+
+module.exports = Post;
+```
+
+Import schema:
+
+```js
+const Post = require('<relative-path>/post');
+```

@@ -7,6 +7,9 @@ const {
     API_KEY
 } = process.env;
 
+// import mongoose schemas
+const User = require('../../models/user');
+
 // handle http post method: http://127.0.0.1:3000/login/apiKey
 router.post('/:apikey', (req, res) => {
 
