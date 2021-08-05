@@ -46,7 +46,7 @@ const {
 Add routes, f.ex:
 
 ```js
-const postRouter = require('./routes/post');
+const postsRouter = require('./routes/posts');
 
-app.use('/posts', postRouter);
+app.use('/posts', postsRouter);
 ```
