@@ -21,14 +21,16 @@ Configuring
 
 Create a new MongoDB database and user: [https://www.mongodb.com/](https://www.mongodb.com/)
 
-Update `environment variables` in `src/.env`:
+Create new file: `.env` in project root directory
+
+Add `environment variables` in `.env` file:
 
 ```markdown
 API_KEY=<insert-api-key>
 DB_NAME=<insert-database-name>
 DB_USER=<insert-database-username>
 DB_PASS=<insert-database-password>
-DISCORD_BOT_TOKEN=<insert-discord-bot-token>
+BOT_TOKEN=<insert-discord-bot-token>
 ```
 
 Use the `API_KEY` when doing HTTP requests.
@@ -39,11 +41,12 @@ Environment variables are imported where it's needed, f.ex in `src/index.js`:
 const {
     DB_NAME,
     DB_USER,
-    DB_PASS
+    DB_PASS,
+    BOT_TOKEN
 } = process.env;
 ```
 
-Add routes, f.ex:
+Add new routes, f.ex:
 
 ```js
 const postsRouter = require('./routes/posts');
@@ -51,7 +54,7 @@ const postsRouter = require('./routes/posts');
 app.use('/posts', postsRouter);
 ```
 
-Create new router
+Create new router for the new routes:
 
 ```js
 const express = require('express');
