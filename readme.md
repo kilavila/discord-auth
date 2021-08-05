@@ -57,9 +57,7 @@ Create new router
 const express = require('express');
 const router = express.Router();
 
-const {
-    API_KEY
-} = process.env;
+const { API_KEY } = process.env;
 
 router.post('/:apiKey', (req, res) => {
 
