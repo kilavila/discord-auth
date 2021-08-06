@@ -13,6 +13,14 @@ const userSchema = new Schema({
     discordID: {
         type: String,
         required: true
+    },
+    authID: {
+        type: String,
+        required: true
+    },
+    authCode: {
+        type: String,
+        required: true
     }
 }, { timestamps: true });
 
