@@ -1,5 +1,0 @@
-POST http://127.0.0.1:3000/register/knzbXlvNJ8L3ZS7M
-
-###
-
-POST http://127.0.0.1:3000/login/knzbXlvNJ8L3ZS7M
