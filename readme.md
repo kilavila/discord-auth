@@ -107,3 +107,37 @@ Import schema:
 ```js
 const Post = require('<relative-path>/post');
 ```
+
+<br />
+
+Starting server
+---------------
+
+Navigate to root directory and run:
+
+```php
+$ node ./src/index.js
+```
+
+Scripts in `package.json` to make it easier to start and develop, f.ex:
+
+```json
+{
+    "scripts": {
+        "start": "node ./src/index.js",
+        "dev": "nodemon ./src/index.js"
+    }
+}
+```
+
+Now you can run:
+
+```php
+$ npm start
+```
+
+and
+
+```php
+$ npm run dev
+```
