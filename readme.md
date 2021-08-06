@@ -24,7 +24,7 @@ Configuring
 
 Create a new MongoDB database and user: [https://www.mongodb.com/](https://www.mongodb.com/)
 
-Create new file: `.env` in project root directory
+Create new file: `.env` in project root directory.
 
 Add `environment variables` in `.env` file:
 
@@ -36,7 +36,9 @@ DB_PASS=<insert-database-password>
 BOT_TOKEN=<insert-discord-bot-token>
 ```
 
-Use the `API_KEY` when doing HTTP requests.
+> Don't make the `.env` file or it's content public.
+
+Use the `API_KEY` when sending HTTP requests, only requests with correct key will be handled.
 
 Environment variables are imported where it's needed, f.ex in `src/index.js`:
 
@@ -69,7 +71,7 @@ router.post('/:apiKey', (req, res) => {
 
     // Check API-Key
     
-    // Handle request and deliver response
+    // Handle request
 
 });
 
@@ -141,3 +143,37 @@ and
 ```php
 $ npm run dev
 ```
+
+Nodemon restarts the server each time you save a file, which is great when developing.
+
+<br />
+
+Deploying
+---------
+
+Add request origins to `allowList`:
+
+```js
+const allowList = [
+    'https://example.com',
+    'https://your-website.org'
+];
+
+const corsOptionsDelegate = (req, callback) => {
+
+    let corsOptions;
+
+    if (allowList.indexOf(req.header('Origin')) !== -1) {
+        corsOptions = { origin: true }
+    } else {
+        corsOptions = { origin: false }
+    }
+
+    callback(null, corsOptions);
+
+}
+
+app.use(cors(corsOptionsDelegate));
+```
+
+Only websites and IP addresses added to `allowList` will be able to send requests to the server.
