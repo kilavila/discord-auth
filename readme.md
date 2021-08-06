@@ -3,7 +3,10 @@ Discord-auth
 
 <img src="https://img.shields.io/badge/build-failing-red" /> <img src="https://img.shields.io/badge/coverage-0%25-red" /> <img src="https://img.shields.io/badge/node-14.16.0-blue" /> <img src="https://img.shields.io/badge/npm-6.14.11-blue" /> <img src="https://img.shields.io/badge/express-4.17.1-blue" /> <img src="https://img.shields.io/badge/mongoose-5.13.5-blue" /> <img src="https://img.shields.io/badge/bcrypt-5.0.1-blue" /> <img src="https://img.shields.io/badge/cors-2.8.5-blue" /> <img src="https://img.shields.io/badge/dotenv-10.0.0-blue" /> <img src="https://img.shields.io/badge/discord.js-12.5.3-blue" /> <img src="https://img.shields.io/badge/discord--buttons-4.0.0-blue" />
 
-<br /><br />
+**Authenticate logins with discord bot.**<br />
+Create a bot and add it to your discord server so that users can receive authentication messages when logging in to your website.
+
+<br />
 
 Installing
 ----------
